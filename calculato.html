@@ -84,22 +84,19 @@
     let display = document.getElementById('display');
     let errorMessage = document.getElementById('error-message');
 
-    // Append numbers or operators to the display
     function appendToDisplay(value) {
       display.value += value;
-      errorMessage.textContent = ''; // Clear any previous error messages
+      errorMessage.textContent = ''; 
     }
 
-    // Clear the display
     function clearDisplay() {
       display.value = '';
-      errorMessage.textContent = ''; // Clear any previous error messages
+      errorMessage.textContent = ''; 
     }
 
-    // Calculate the result of the expression
     function calculateResult() {
       try {
-        let result = eval(display.value); // Using eval to evaluate the string expression
+        let result = eval(display.value); 
         if (result === Infinity || result === -Infinity) {
           throw new Error('Cannot divide by zero');
         }
